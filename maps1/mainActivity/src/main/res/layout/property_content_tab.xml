@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:id="@+id/streetmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+
+        <LinearLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:background="#00000000">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:background="#00000000">
+
+                <TableRow
+                    android:id="@+id/tableRow0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" 
+                    android:background="#00000000">
+
+                    <!--
+                          <ImageView
+                        android:id="@+id/info_window_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true" />
+                    -->
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp" >
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:background="#80F5FAED" >
+
+                            <TextView
+                                android:id="@+id/address_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#80F5FAED"
+                                android:ems="10"
+                                android:textSize="12dp"
+                                android:textColor="#000000" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1" 
+                            android:background="#80F5FAED">
+
+                            <TextView
+                                android:id="@+id/price_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#80F5FAED"
+                                android:ems="10"
+                                android:textSize="12dp"
+                                android:textColor="#000000" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1" 
+                            android:background="#80F5FAED">
+
+                            <TextView
+                                android:id="@+id/date_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#80F5FAED"
+                                android:ems="10"
+                                android:textSize="12dp"
+                                android:textColor="#000000" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/add_property_button"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:textSize="12dp"
+                        android:text="@string/save_property" />
+                    
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

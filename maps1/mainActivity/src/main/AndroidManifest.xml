@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.company.propertypricetest"
+  android:versionCode="9"
+  android:versionName="1.0">
+  <!-- ToDo : Change the package name for the app -->
+  <uses-sdk
+    android:minSdkVersion="13"
+    android:targetSdkVersion="19"/>
+  <permission android:name="com.company.propertypricetest.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <!-- External storage for caching. -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <!-- My Location -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <!-- Maps API needs OpenGL ES 2.0. -->
+  <uses-feature
+    android:glEsVersion="0x00020000"
+    android:required="true"/>
+  <!-- End of copy. -->
+  <application
+    android:name="com.company.propertyprice.IrishPropertyApplication"
+    android:allowBackup="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/demo_title"
+    android:hardwareAccelerated="true">
+    <!-- ** You need to replace the key below with your own key. **
+         The example key below will not be accepted because it is not linked to the
+         certificate which you will use to sign this application.
+         See: https://developers.google.com/maps/documentation/android/start
+         for instructions on how to get your own key. -->
+    <meta-data android:name="com.google.android.maps.v2.API_KEY"
+    android:value="AIzaSyBNx8S7f3HWjplXX-38rpadXS38zK9lbuw"/>
+    <!--  <meta-data android:name="com.google.android.maps.v2.API_KEY"
+    android:value="AIzaSyC0pdCeRAObLhwy_nBk5xVp8WHY-B_QuGA"/>-->
+    <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    <activity android:name="com.company.propertyprice.activities.MainActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+           <action android:name="android.intent.action.SEARCH" />
+      </intent-filter>
+      
+      <!-- DEEP LINKS for PPR Site (works on mobile Chrome and default browser)    -->
+      <intent-filter>
+         <action android:name="android.intent.action.VIEW" />
+         <category android:name="android.intent.category.BROWSABLE" />
+         <category android:name="android.intent.category.DEFAULT" />
+    	 <data
+	        android:host="propertypriceregister.ie" android:scheme="https" android:pathPattern=".*UNID.*" />
+    	 <data
+	        android:host="www.propertypriceregister.ie" android:scheme="https" android:pathPattern=".*UNID.*" />
+      </intent-filter>
+      
+      
+      <meta-data android:name="android.app.searchable"
+    		android:resource="@xml/searchable" />
+    </activity>
+    <service android:name="com.company.propertyprice.service.GridPathPredictionService" />
+  </application>
+</manifest>

@@ -1,0 +1,14 @@
+.match{
+	color: red;
+	padding: 0 80px;
+}
+
+table, th {
+    border: 1px solid blue;
+    font-size: 10px;
+}
+
+td {
+    background-color: #dadada;
+    color: black;
+}

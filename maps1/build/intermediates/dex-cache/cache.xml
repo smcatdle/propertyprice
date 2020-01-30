@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/libs/company-utils-0.0.1-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="840e6df91560c5c2b99d0bd58893b25f81ae6270">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/company-utils-0.0.1-SNAPSHOT-132124bb56d2c4fea830888f6696c1fe00f6ad35.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-1527c1469de1c41638b9a1158398283cb5bafb23.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-02b944f63d3ddf751aacce9dcb3a58da98910eaf.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/libs/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/picasso-2.4.0-a8d437d24483edd85413daf7a9e3f36d5c56e093.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-080e51bcf601af9f6a70fb5151bce11b5c9678f8.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-cc3007bc0bc3328a9386044bcac6bc02297d65e9.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-e795a93e348cb2e9823fdbd29d0721e22151e95f.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-e1a4b4fbabc2e4ef6fae349db5c0346b03ada83c.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-00f7648e48df7ac3f880aae3a84ad899cccf46fa.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-a214de82218a10e9c016d2bc11b08fd7fb40ab86.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/libs/androidplot-core-0.6.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3db0daea52375b26bfa61c59b8df93950bdefbbc">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/androidplot-core-0.6.1-ed1c6de95d12b8bb5dc601d9d76fac49288cb34a.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/internal_impl-22.0.0-e5a72cc696b95fcf5b28ac6c26d18b08fe6ff583.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/libs/property-price-googleapi-0.0.1-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9b7a53f38b5d6b1f7f612120016b8623e6d8c2a2">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/property-price-googleapi-0.0.1-SNAPSHOT-1f6f91db8969af9eab7894fcd98f25f34bf351f8.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-0015dddfcd4723accdec5ec2545bf135db3e1b79.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-baa19ceba4d6a5c870ce65f6c28423becab22636.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-0f5e70ea64e2a867c993965711eb64531df80def.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-947f4bef92eb59fa14a92f350808b53354ca15a4.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-599c83f545103fb468b0fe8d2267030e296d87e5.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/support-annotations-22.0.0-88cfb37f48d6b2978535e23e6461883fc5fa43b8.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/maps1/libraryListViewAnimations/unspecified/libs/stickylistheaders_lib.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/stickylistheaders_lib-d3c24cf5f2b36df28d3fc0671707d1a384786261.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-76b1f6f8f6701497fe4469f0481dcd8b510b1707.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/libs/property-price-model-0.0.1-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="016b7ac0925833d730c7f6a1fcc6445a785cde14">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/property-price-model-0.0.1-SNAPSHOT-5dee65f500da17bb8f2a78494ca041c991d56485.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-b8bbdda9f91689f69c17c007f74b533c57871ee1.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-9beba52f9ac047a4b5c468cb4f758df4e7c4693b.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/maps1/library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f0f898f666b9b900c651632c9a396f3d65784b1e">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-f002099a7ca1ddd321e6671b2f4537fb2e14e087.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/maps1/libraryListViewAnimations/unspecified/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/nineoldandroids-2.4.0-e48bcc2906f5c898900931b70355c0c323614b2a.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.2/1f96456ca233dec780aa224bff076d8e8bca3908/gson-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1f96456ca233dec780aa224bff076d8e8bca3908">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/gson-2.2.2-728595e43b21d326db4fdc0a5834ec9531371ff9.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-e452d12d2e4a9609490a0cacfd60a612a8376372.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-0934a6a52a1b90bf245b2feaadd5c9a591698bca.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-13b2279ce6432dd552b35c9f6b32ebd287c2b3cf.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-5705a235bd5475ab95edbcf150131bbadaacc1a4.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/internal_impl-22.0.0-2d8c20c437dcd4f8e01c9bc794799e29ffe076ce.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-f3118a7358f4a6d7526fd009fb0bc1cf1583890e.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-d20f0801355c04f7c9b57aebf3e8d30dc2100e7f.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-daf4a6e9ba8e313252cd2a8e5feeb40cb824a177.jar" />
+    </item>
+    <item
+        jar="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/exploded-aar/maps1/libraryListViewAnimations/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="aaa2c5b1439ee04661065b58432bbd047cb3594c">
+        <dex dex="/Users/smcardle/Development/projects/propertyrprice/maps1/mainActivity/build/intermediates/pre-dexed/release/classes-2ffe44139ed8cf2fc5c65999816a2044a144ca97.jar" />
+    </item>
+
+</items>

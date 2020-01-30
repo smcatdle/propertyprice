@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.PropertySale" table="property_sale" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="address" class="com.company.propertyprice.model.Address" fetch="select" cascade="save-update">
+            <column name="address_id" not-null="true" />
+        </many-to-one>
+        <property name="price" type="double">
+            <column name="price" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="dateOfSale" type="date">
+            <column name="date_of_sale" length="13" not-null="true" />
+        </property>
+        <property name="fullMarketPrice" type="boolean">
+            <column name="full_market_price" not-null="true" />
+        </property>
+        <property name="propertySize" type="string">
+            <column name="property_size" not-null="false" />
+        </property>
+        <!--  <property name="description" type="string">
+            <column name="description" not-null="false" />
+        </property>-->
+        <property name="vatExclusive" type="boolean">
+            <column name="vat_exclusive" not-null="true" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="date">
+            <column name="date_updated" length="13" not-null="true" />
+        </property>
+        <property name="pprUrl" type="string">
+            <column name="ppr_url" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" not-null="false" />
+        </property>
+    </class>
+    
+    <query name="PropertySale.findExistingAddress">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address where propertySale.address = address and lower(address.addressLine1) = lower(:address_line_1) and address.addressLine2 = :address_line_2 and address.addressLine3 = :address_line_3 and address.addressLine4 = :address_line_4 and address.addressLine5 = :address_line_5]]>
+	</query>
+	<query name="PropertySale.getPropertyByUUID">
+		<![CDATA[from PropertySale where pprUrl like :uuid]]>
+	</query>
+	<query name="PropertySale.findPropertyByURL">
+		<![CDATA[from PropertySale where pprUrl = :url]]>
+	</query>
+    <query name="PropertySale.findPropertiesWithinViewport">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address, GeoCode geocode where propertySale.address = address and address.geocode = geocode and geocode.latitude < :topLeftLat and geocode.longitude > :topLeftLong and geocode.latitude > :bottomRightLat and geocode.longitude < :bottomRightLong]]>
+	</query>
+	<query name="PropertySale.findBadAddressProperties">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address, GeoCode geocode where propertySale.address = address and address.geocode = geocode and geocode.latitude < :topLeftLat and geocode.longitude > :topLeftLong and geocode.latitude > :bottomRightLat and geocode.longitude < :bottomRightLong]]>
+	</query>
+	<query name="PropertySale.findProperties">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address, GeoCode geocode where propertySale.address = address and address.geocode = geocode and address.addressLine1 = 'APT 37 THE PAVILION']]>
+	</query>
+	<query name="PropertySale.getGridsInsideViewPort">
+		<![CDATA[select distinct(geocode.gridId) from GeoCode geocode where geocode.gridId <> 0 and geocode.latitude < :topLeftLat and geocode.longitude > :topLeftLong and geocode.latitude > :bottomRightLat and geocode.longitude < :bottomRightLong order by geocode.id asc]]>
+	</query>
+	<query name="PropertySale.getGridsOutsideViewPort">
+		<![CDATA[select distinct(geocode.gridId) from GeoCode geocode where geocode.latitude > :topLeftLat or geocode.longitude < :topLeftLong or geocode.latitude < :bottomRightLat]]>
+	</query>
+	<query name="PropertySale.findPropertiesInsideGrid">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address, GeoCode geocode where propertySale.address = address and address.geocode = geocode and geocode.gridId = :gridId]]>
+	</query>
+	<!--  select * from property_sale p, address a, geocode g where p.address_id = a.id and a.geocode_id = g.id and g.latitude > 53.3477074 and g.longitude > -6.2582159 and g.latitude < 53.3509608 and g.longitude < -6.2477874; -->
+	<!--  select * from property_sale propertySale, address address, geocode geocode where propertySale.address_id = address.id and address.geocode_id = geocode.id and geocode.latitude > 53.332073 and geocode.longitude > -6.301758 and geocode.latitude < 53.372726 and geocode.longitude < -6.2512207;-->
+    <!-- select sum(price)/(select count(1) from property_sale, address a where date_of_sale >= '2014-03' and date_of_sale <= '2014-03' and a.id = address_id and address_line_5 = 'Dublin') from property_sale, address a where date_of_sale >= '2014-03' and date_of_sale <= '2014-03' and a.id = address_id  and address_line_5 = 'Dublin'; -->
+    <!-- select sum(price)/(select count(1) from property_sale, address a where date_of_sale = '2014-03' and a.id = address_id and address_line_5 = 'Dublin') from property_sale, address a where date_of_sale = '2014-03' and a.id = address_id  and address_line_5 = 'Dublin'; -->
+    <!-- select count(1) from property_sale, address a where MONTH(date_of_sale) = MONTH('2014-03-01') and YEAR(date_of_sale) = YEAR('2014-03-01')  and a.id = address_id and address_line_5 = 'Dublin'; -->
+    <!-- select count(1), sum(price)/count(1), CONCAT(YEAR(date_of_sale), '-', MONTH(date_of_sale)) as sale_date, date_of_sale from property_sale, address a where  a.id = address_id and (address_line_4 like '%Dublin%' or address_line_5 like '%Dublin%' or address_line_3 like '%Dublin%') and price < 2000000 and full_market_price = 1 group by sale_date order by date_of_sale; -->
+    <query name="PropertySale.findPropertiesByDateWithinViewport">
+		<![CDATA[select propertySale from PropertySale propertySale, Address address, GeoCode geocode where propertySale.address = address and address.geocode = geocode and geocode.latitude > :topLeftLat and geocode.longitude > :topLeftLong and geocode.latitude < :bottomRightLat and geocode.longitude < :bottomRightLong and propertySale.dateOfSale > :dateFrom and propertySale.dateOfSale < :dateTo]]>
+	</query>
+	
+</hibernate-mapping>
+
+

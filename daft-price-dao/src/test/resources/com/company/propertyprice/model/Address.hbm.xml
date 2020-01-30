@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.Address" table="address" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="geocode" class="com.company.propertyprice.model.GeoCode" fetch="select" cascade="save-update">
+            <column name="geocode_id" not-null="true" />
+        </many-to-one>
+        <property name="addressLine1" type="string">
+            <column name="address_line_1" not-null="true" />
+        </property>
+        <property name="addressLine2" type="string">
+            <column name="address_line_2" />
+        </property>
+        <property name="addressLine3" type="string">
+            <column name="address_line_3" />
+        </property>
+        <property name="addressLine4" type="string">
+            <column name="address_line_4" />
+        </property>
+        <property name="addressLine5" type="string">
+            <column name="address_line_5" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="date">
+            <column name="date_updated" length="13" not-null="true" />
+        </property>
+        <set name="propertySales" table="property_sale" inverse="true" cascade="save-update" lazy="false" fetch="select">
+            <key>
+                <column name="address_id" not-null="true" />
+            </key>
+            <one-to-many class="com.company.propertyprice.model.PropertySale" />
+        </set>
+    </class>
+</hibernate-mapping>

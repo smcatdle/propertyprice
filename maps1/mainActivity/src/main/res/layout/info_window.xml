@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="0.16" >
+		
+		    <TextView
+		        android:id="@+id/address_text"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#FFFFFF"
+		        android:textColor="#000000"
+		        android:ems="10" />
+		    
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="0.16" >
+		
+		    <TextView
+		        android:id="@+id/date_of_sale_text"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#FFFFFF"
+		        android:textColor="#000000"
+		        android:ems="10" />
+		    
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="0.16" >
+		
+		    <TextView
+		        android:id="@+id/price_text"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#FFFFFF"
+		        android:textColor="#000000"
+		        android:ems="10" />
+		    
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="0.16" >
+		
+            <Button
+		        android:id="@+id/view_property_button"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/view_property"
+		        android:layout_alignParentRight="true"/>
+            
+           <Button
+		        android:id="@+id/save_property_button"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/save_property"
+		        android:layout_alignParentRight="true"/>
+                        
+           <Button
+		        android:id="@+id/close_button"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/close"
+		        android:layout_alignParentRight="true"/>
+		    
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

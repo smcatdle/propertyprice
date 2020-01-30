@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+	<display-name>Archetype Created Web Application</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+	</context-param>
+		
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.company.priceengine.listeners.ConfigListener</listener-class>
+	</listener>
+	
+	<!-- The PropertyServlet -->
+	<servlet>
+		<servlet-name>PropertyServlet</servlet-name>
+		<servlet-class>com.company.priceengine.PropertyServlet</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<!-- The PPREngineBatchServlet -->
+	<servlet>
+		<servlet-name>PPREngineBatchServlet</servlet-name>
+		<servlet-class>com.company.priceengine.PPREngineBatchServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<!-- The HealthCheckServlet -->
+	<servlet>
+		<servlet-name>HealthCheckServlet</servlet-name>
+		<servlet-class>com.company.priceengine.HealthCheckServlet</servlet-class>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TestFastPropertyRetrieveServlet</servlet-name>
+		<servlet-class>com.company.priceengine.TestFastPropertyRetrieveServlet</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RetrieveGraphDataServlet</servlet-name>
+		<servlet-class>com.company.priceengine.RetrieveGraphDataServlet</servlet-class>
+		<load-on-startup>6</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CrossCheckAddressesServlet</servlet-name>
+		<servlet-class>com.company.priceengine.CrossCheckAddressesServlet</servlet-class>
+		<load-on-startup>7</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetSaleByUUIDServlet</servlet-name>
+		<servlet-class>com.company.priceengine.GetSaleByUUIDServlet</servlet-class>
+		<load-on-startup>8</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LogUserCrashServlet</servlet-name>
+		<servlet-class>com.company.priceengine.LogUserCrashServlet</servlet-class>
+		<load-on-startup>9</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>com.company.priceengine.TestServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RetrieveLastCrossCheckServlet</servlet-name>
+		<servlet-class>com.company.priceengine.RetrieveLastCrossCheckServlet</servlet-class>
+		<load-on-startup>11</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map all requests to the PropertyServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>PropertyServlet</servlet-name>
+		<url-pattern>/PropertyServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Map all requests to the PPREngineBatchServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>PPREngineBatchServlet</servlet-name>
+		<url-pattern>/PPREngineBatchServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- Map all requests to the HealthCheckServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>HealthCheckServlet</servlet-name>
+		<url-pattern>/HealthCheckServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TestFastPropertyRetrieveServlet</servlet-name>
+		<url-pattern>/TestFastPropertyRetrieveServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RetrieveGraphDataServlet</servlet-name>
+		<url-pattern>/RetrieveGraphDataServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CrossCheckAddressesServlet</servlet-name>
+		<url-pattern>/CrossCheckAddressesServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetSaleByUUIDServlet</servlet-name>
+		<url-pattern>/GetSaleByUUIDServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LogUserCrashServlet</servlet-name>
+		<url-pattern>/LogUserCrashServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/TestServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RetrieveLastCrossCheckServlet</servlet-name>
+		<url-pattern>/RetrieveLastCrossCheckServlet</url-pattern>
+	</servlet-mapping>
+	
+
+	
+</web-app>

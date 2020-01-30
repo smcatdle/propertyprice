@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.PropertySaleUpdate" table="property_sale_update" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="pprUrl" type="string">
+            <column name="ppr_url" not-null="true" />
+        </property>
+    </class>
+	
+</hibernate-mapping>
+
+

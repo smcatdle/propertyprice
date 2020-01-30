@@ -1,0 +1,3 @@
+include ':libraryListViewAnimations'
+include ':library'
+include ':mainActivity'

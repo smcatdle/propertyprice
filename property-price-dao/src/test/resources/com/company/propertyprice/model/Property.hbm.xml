@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.DaftProperty" table="property" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="propertyId" type="integer">
+            <column name="property_id" not-null="true" />
+        </property>
+        <many-to-one name="address" class="com.company.propertyprice.model.Address" fetch="select" cascade="save-update">
+            <column name="address_id" not-null="true" />
+        </many-to-one>
+        <property name="price" type="double">
+            <column name="price" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="beds" type="integer">
+            <column name="beds" not-null="true" />
+        </property>
+        <property name="baths" type="integer">
+            <column name="baths" not-null="true" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="date">
+            <column name="date_updated" length="13" not-null="true" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="image_url" not-null="true" />
+        </property>
+        <property name="fileId" type="string">
+            <column name="file_id" not-null="false" />
+        </property>
+    </class>
+		
+</hibernate-mapping>

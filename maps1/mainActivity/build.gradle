@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.company.propertypricetest"
+        minSdkVersion 10
+        targetSdkVersion 21
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../property-price-key.keystore")
+            storePassword "snowboard"
+            keyAlias "alias_name"
+            keyPassword "snowboard"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':library')
+    compile project(':libraryListViewAnimations')
+    compile 'com.google.code.gson:gson:2.2.2'
+    compile 'com.google.android.gms:play-services:6.1.71'
+    compile files('libs/androidplot-core-0.6.1.jar')
+    compile files('libs/picasso-2.4.0.jar')
+    compile files('libs/company-utils-0.0.1-SNAPSHOT.jar')
+    compile files('libs/property-price-model-0.0.1-SNAPSHOT.jar')
+    compile files('libs/property-price-googleapi-0.0.1-SNAPSHOT.jar')
+}

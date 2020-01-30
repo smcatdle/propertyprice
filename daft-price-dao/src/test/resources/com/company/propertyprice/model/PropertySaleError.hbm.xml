@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.PropertySaleError" table="property_sale_error" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="issue" type="string">
+            <column name="issue" not-null="false" />
+        </property>
+        <property name="pprUrl" type="string">
+            <column name="ppr_url" not-null="true" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="date">
+            <column name="date_updated" length="13" not-null="true" />
+        </property>
+    </class>
+	
+</hibernate-mapping>
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.ServerNode" table="server_node" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="serverName" type="string">
+            <column name="server_name" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+    </class>
+    
+    <query name="ServerNode.getServerNodes">
+		<![CDATA[select serverNode from ServerNode serverNode where serverNode.type = :type]]>
+	</query>
+</hibernate-mapping>

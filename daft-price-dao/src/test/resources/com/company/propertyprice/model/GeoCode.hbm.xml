@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 6, 2014 5:18:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.company.propertyprice.model.GeoCode" table="geocode" lazy="false">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="latitude" type="java.lang.Double">
+            <column name="latitude" precision="17" scale="17" />
+        </property>
+        <property name="longitude" type="java.lang.Double">
+            <column name="longitude" precision="17" scale="17" />
+        </property>
+        <property name="latitudeBck" type="java.lang.Double">
+            <column name="latitude_bck" precision="17" scale="17" />
+        </property>
+        <property name="longitudeBck" type="java.lang.Double">
+            <column name="longitude_bck" precision="17" scale="17" />
+        </property>
+        <property name="geocodeCurType" type="string">
+            <column name="geocode_cur_type" />
+        </property>
+        <property name="geocodeBckType" type="string">
+            <column name="geocode_bck_type" />
+        </property>
+        <property name="formattedAddress" type="string">
+            <column name="format_addrr" />
+        </property>
+        <property name="formattedAddressBck" type="string">
+            <column name="format_addrr_bck" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+        <property name="locationType" type="string">
+            <column name="location_type" />
+        </property>
+        <property name="partialMatch" type="boolean">
+            <column name="partial_match" />
+        </property>
+        <property name="results" type="int">
+            <column name="results" />
+        </property>
+        <property name="dateCreated" type="date">
+            <column name="date_created" length="13" not-null="true" />
+        </property>
+        <property name="dateUpdated" type="date">
+            <column name="date_updated" length="13" not-null="true" />
+        </property>
+        <set name="addresses" table="address" inverse="true" cascade="save-update" lazy="false" fetch="select">
+            <key>
+                <column name="geocode_id" not-null="true" />
+            </key>
+            <one-to-many class="com.company.propertyprice.model.Address" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,194 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0131918f, pid=2638, tid=2953654272
+#
+# JRE version: 6.0_03
+# Java VM: Dynamic Code Evolution Server VM (0.2-b02-internal, 19.0-b02 mixed mode bsd-x86 )
+# Problematic frame:
+# V  [libjvm.dylib+0x31918f]
+#
+# If you would like to submit a bug report, please visit:
+#   http://ssw.jku.at/dcevm/bugreport/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02045c00):  VMThread [stack: 0xb0053000,0xb00d3000] [id=-1341313024]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x2201b1ec
+
+Registers:
+EAX=0x00000008, EBX=0x013192a6, ECX=0x00000003, EDX=0x0201b8a0
+ESP=0xb00d2530, EBP=0xb00d2558, ESI=0x07fffe53, EDI=0xffffca63
+EIP=0x0131918f, EFLAGS=0x00010202
+
+Top of Stack: (sp=0xb00d2530)
+0xb00d2530:   00007ff4 15c54ceb 002066c0 b00d2778
+0xb00d2540:   00000000 15c54ceb b00d2578 b00d2570
+0xb00d2550:   15c54cef 0000004f b00d25b8 013194ab
+0xb00d2560:   0000004b 0000004b b00d2590 013194ab
+0xb00d2570:   b00d2778 ffffca63 00000000 15c5ca14
+0xb00d2580:   00000044 15c54ceb 00000000 01319160
+0xb00d2590:   b00d2778 0000004b 15c54f88 15c54f88
+0xb00d25a0:   15c54f88 013192a6 b00d25d0 0131f6c6 
+
+Instructions: (pc=0x0131918f)
+0x0131917f:   8b 50 48 83 e1 1f b8 01 00 00 00 c1 ee 05 d3 e0
+0x0131918f:   85 04 b2 75 1d 50 6a 01 57 8b 45 e4 83 c0 48 50 
+
+Stack: [0xb0053000,0xb00d3000],  sp=0xb00d2530,  free space=1fdb00d1f20k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.dylib+0x31918f]
+V  [libjvm.dylib+0x3194ab]
+V  [libjvm.dylib+0x31f89c]
+V  [libjvm.dylib+0x320e5a]
+V  [libjvm.dylib+0x58f288]
+V  [libjvm.dylib+0x59006f]
+V  [libjvm.dylib+0x5902c2]
+V  [libjvm.dylib+0x357e65]
+V  [libjvm.dylib+0x563e56]
+V  [libjvm.dylib+0x6f36ca]
+V  [libjvm.dylib+0x49515c]
+V  [libjvm.dylib+0x703b55]
+V  [libjvm.dylib+0x7021bd]
+V  [libjvm.dylib+0x702fc2]
+V  [libjvm.dylib+0x70317c]
+V  [libjvm.dylib+0x597f55]
+C  [libsystem_pthread.dylib+0x2ecf]  _pthread_body+0x8a
+C  [libsystem_pthread.dylib+0x2e45]  _pthread_body+0x0
+C  [libsystem_pthread.dylib+0xf0e]  thread_start+0x22
+
+VM_Operation (0xb021a930): GetOrSetLocal, mode: safepoint, requested by thread 0x19005400
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x021aa400 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2" daemon [_thread_blocked, id=-1335349248, stack(0xb0633000,0xb0683000)]
+  0x025db800 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1" daemon [_thread_blocked, id=-1335685120, stack(0xb05e1000,0xb0631000)]
+  0x021a0800 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0" daemon [_thread_blocked, id=-1336020992, stack(0xb058f000,0xb05df000)]
+  0x021a3400 JavaThread "Timer-0" daemon [_thread_blocked, id=-1336356864, stack(0xb053d000,0xb058d000)]
+  0x020bd000 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=-1336692736, stack(0xb04eb000,0xb053b000)]
+  0x188c5400 JavaThread "ReaderThread" [_thread_in_native, id=-1337028608, stack(0xb0499000,0xb04e9000)]
+  0x00807c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=-1337896960, stack(0xb03c5000,0xb0415000)]
+  0x00807000 JavaThread "CompilerThread1" daemon [_thread_blocked, id=-1338232832, stack(0xb0343000,0xb03c3000)]
+  0x00805c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=-1338765312, stack(0xb02c1000,0xb0341000)]
+  0x00804c00 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=-1339297792, stack(0xb026f000,0xb02bf000)]
+  0x00800800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=-1339633664, stack(0xb021d000,0xb026d000)]
+  0x19005400 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=-1339969536, stack(0xb01cb000,0xb021b000)]
+  0x0204f400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=-1340305408, stack(0xb0179000,0xb01c9000)]
+  0x18802000 JavaThread "Finalizer" daemon [_thread_blocked, id=-1340641280, stack(0xb0127000,0xb0177000)]
+  0x18801000 JavaThread "Reference Handler" daemon [_thread_blocked, id=-1340977152, stack(0xb00d5000,0xb0125000)]
+  0x02004800 JavaThread "main" [_thread_blocked, id=-1341845504, stack(0xb0001000,0xb0051000)]
+
+Other Threads:
+=>0x02045c00 VMThread [stack: 0xb0053000,0xb00d3000] [id=-1341313024]
+  0x00811400 WatcherThread [stack: 0xb0417000,0xb0497000] [id=-1337364480]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x002025c0] Threads_lock - owner thread: 0x02045c00
+
+Heap
+ def new generation   total 11776K, used 5578K [0x05800000, 0x064c0000, 0x0a750000)
+  eden space 10496K,  46% used [0x05800000, 0x05cbc460, 0x06240000)
+  from space 1280K,  56% used [0x06380000, 0x06436548, 0x064c0000)
+  to   space 1280K,   0% used [0x06240000, 0x06240000, 0x06380000)
+ tenured generation   total 26016K, used 19971K [0x0a750000, 0x0c0b8000, 0x14600000)
+   the space 26016K,  76% used [0x0a750000, 0x0bad0ed8, 0x0bad1000, 0x0c0b8000)
+ compacting perm gen  total 23040K, used 22869K [0x14600000, 0x15c80000, 0x18600000)
+   the space 23040K,  99% used [0x14600000, 0x15c55410, 0x15c55600, 0x15c80000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00000000 	/usr/lib/libSystem.B.dylib
+0x00000000 	/usr/lib/system/libcache.dylib
+0x00000000 	/usr/lib/system/libcommonCrypto.dylib
+0x00000000 	/usr/lib/system/libcompiler_rt.dylib
+0x00000000 	/usr/lib/system/libcopyfile.dylib
+0x00000000 	/usr/lib/system/libcorecrypto.dylib
+0x00000000 	/usr/lib/system/libdispatch.dylib
+0x00000000 	/usr/lib/system/libdyld.dylib
+0x00000000 	/usr/lib/system/libkeymgr.dylib
+0x00000000 	/usr/lib/system/liblaunch.dylib
+0x00000000 	/usr/lib/system/libmacho.dylib
+0x00000000 	/usr/lib/system/libquarantine.dylib
+0x00000000 	/usr/lib/system/libremovefile.dylib
+0x00000000 	/usr/lib/system/libsystem_asl.dylib
+0x00000000 	/usr/lib/system/libsystem_blocks.dylib
+0x00000000 	/usr/lib/system/libsystem_c.dylib
+0x00000000 	/usr/lib/system/libsystem_configuration.dylib
+0x00000000 	/usr/lib/system/libsystem_coreservices.dylib
+0x00000000 	/usr/lib/system/libsystem_coretls.dylib
+0x00000000 	/usr/lib/system/libsystem_dnssd.dylib
+0x00000000 	/usr/lib/system/libsystem_info.dylib
+0x00000000 	/usr/lib/system/libsystem_kernel.dylib
+0x00000000 	/usr/lib/system/libsystem_m.dylib
+0x00000000 	/usr/lib/system/libsystem_malloc.dylib
+0x00000000 	/usr/lib/system/libsystem_network.dylib
+0x00000000 	/usr/lib/system/libsystem_networkextension.dylib
+0x00000000 	/usr/lib/system/libsystem_notify.dylib
+0x00000000 	/usr/lib/system/libsystem_platform.dylib
+0x00000000 	/usr/lib/system/libsystem_pthread.dylib
+0x00000000 	/usr/lib/system/libsystem_sandbox.dylib
+0x00000000 	/usr/lib/system/libsystem_secinit.dylib
+0x00000000 	/usr/lib/system/libsystem_trace.dylib
+0x00000000 	/usr/lib/system/libunc.dylib
+0x00000000 	/usr/lib/system/libunwind.dylib
+0x00000000 	/usr/lib/system/libxpc.dylib
+0x01000000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/server/libjvm.dylib
+0x00000000 	/usr/lib/libstdc++.6.dylib
+0x00000000 	/usr/lib/libc++abi.dylib
+0x0003e000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libverify.dylib
+0x0004e000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libjava.dylib
+0x0007c000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/native_threads/libhpi.dylib
+0x00087000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libjdwp.dylib
+0x000d3000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libnpt.dylib
+0x00000000 	/usr/lib/libiconv.2.dylib
+0x000e2000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libzip.dylib
+0x00000000 	/usr/lib/libz.1.dylib
+0x000ed000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libdt_socket.dylib
+0x18655000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libnet.dylib
+0x1866d000 	/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/libmanagement.dylib
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:52004 -Dfile.encoding=UTF-8 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 52003 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames com.company.priceengine.CrossCheckBulkFacadeTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+SHELL=/bin/bash
+DYLD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386/server:/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/lib/i386:/Library/Java/JavaVirtualMachines/soylatte16-i386-1.0.3/jre/../lib/i386
+
+Signal Handlers:
+SIGSEGV: [libjvm.dylib+0x6fd8e0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGBUS: [libjvm.dylib+0x6fd8e0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGFPE: [libjvm.dylib+0x5942f0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGPIPE: [libjvm.dylib+0x5942f0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGXFSZ: [libjvm.dylib+0x5942f0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGILL: [libjvm.dylib+0x5942f0], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.dylib+0x5954d0], sa_mask[0]=0x00000004, sa_flags=0x00000042
+SIGHUP: [libjvm.dylib+0x596d00], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGINT: [libjvm.dylib+0x596d00], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGTERM: [libjvm.dylib+0x596d00], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+SIGQUIT: [libjvm.dylib+0x596d00], sa_mask[0]=0xfffefeff, sa_flags=0x00000042
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Bsd
+uname:Darwin 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64
+rlimit: STACK 8192k, CORE 0k, NPROC 709, NOFILE 10240
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 969888k(242472k free)
+
+vm_info: Dynamic Code Evolution Server VM (0.2-b02-internal, 19.0-b02) for bsd-x86 JRE (1.7.0-internal-thomas_2010_07_14_21_18-b00), built on Aug  4 2010 00:35:57 by "thomas" with gcc 4.0.1 (Apple Inc. build 5493)
+
+time: Thu Apr  9 18:48:27 2015
+elapsed time: 59 seconds
+
