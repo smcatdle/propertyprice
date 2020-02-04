@@ -76,11 +76,11 @@
 	    <defaultGoal>compile</defaultGoal>
 	    <plugins>
 	    	<!-- Maven compiler plugin -->
-			<!--  <plugin>
+ <plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>7</source>
+					<target>7</target>
 					<showWarnings>true</showWarnings>
 					<excludes>
                       <exclude>**/**/**/util/*.java</exclude>
@@ -113,10 +113,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>-->
+			</plugin>
 	    </plugins>
 	</build>
-  <!--<build>
-    <finalName>agent-record</finalName>
-  </build>-->
 </project>

@@ -66,6 +66,47 @@
 	
   </dependencies>
   <build>
-    <finalName>web-cache-server</finalName>
-  </build>
+	    <defaultGoal>compile</defaultGoal>
+	    <plugins>
+	    	<!-- Maven compiler plugin -->
+			  <plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>7</source>
+					<target>7</target>
+					<showWarnings>true</showWarnings>
+					<excludes>
+                      <exclude>**/**/**/util/*.java</exclude>
+                    </excludes>
+                    <testExcludes>
+                      <exclude>**/**/**/util/*.java</exclude>
+                    </testExcludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			        <excludes>                      
+			            <exclude>SupervaluURLHelper.java</exclude>
+			            <exclude>URLHelper.java</exclude>
+			        </excludes>
+			    </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>install</id>
+						<phase>install</phase>
+						<goals>
+							<goal>sources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+	    </plugins>
+	</build>
 </project>
